@@ -217,6 +217,37 @@ type Rol = "ADMIN" | "USER";
 
 # Tema 6: Enums y tipos literales
 
+## ¿Qué es un enum?
+
+- Un enum es un conjunto de constantes con nombre. A diferencia de otros tipos, TypeScript lo convierte en un objeto de JavaScript.
+
+```typescript
+enum Estado {
+  PENDIENTE = "PENDIENTE",
+  COMPLETADO = "COMPLETADO",
+}
+
+let tarea: Estado = Estado.PENDIENTE;
+```
+
+## ¿Qué es un tipo literal?
+
+- Un tipo literal indica los valores exactos que puede tener una variable. Se suele combinar con una unión ("|").
+
+```typescript
+type Rol = "ADMIN" | "USER";
+
+let rol: Rol = "ADMIN";
+```
+
+## ¿En qué se parecen y en qué se diferencian?
+
+- Se parecen en que los dos limitan los valores que puede tener una variable. Se diferencian en que el enum se usa con su nombre ("Estado.PENDIENTE") y existe en el JavaScript generado, mientras que el tipo literal se usa con el valor directo ("ADMIN") y se borra al compilar.
+
+## ¿En qué situaciones se puede usar cada uno?
+
+- El tipo literal sirve para casos simples con pocos valores, y funciona con cualquier herramienta. El enum sirve cuando se quiere agrupar constantes con nombre, pero funciona con tsx y tsc, no con "node archivo.ts".
+
 # Fuentes - Tema 1:
 
 - https://www.npmjs.com/package/typescript
@@ -245,8 +276,13 @@ type Rol = "ADMIN" | "USER";
 - https://coddy.tech/docs/es/typescript/functions
 - https://coddy.tech/docs/es/typescript/optional-parameters
 
-# Fuentes- Tema 5:
+# Fuentes - Tema 5:
 
 - Material del Classroom.
 - https://coddy.tech/docs/es/typescript/interfaces
 - https://coddy.tech/docs/es/typescript/interface-vs-type
+
+# Fuentes - Tema 6:
+
+- https://coddy.tech/docs/es/typescript/enums
+- Material del Classroom.
