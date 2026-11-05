@@ -33,6 +33,46 @@
 
 - Según la página de descarga de TypeScript en npm, la última versión de este lenguaje de programación es la 7.0.2.
 
+# Tema 2: Crear y ejecutar un proyecto
+
+## ¿Cómo se instala TypeScript en un proyecto?
+
+- La instalación de TypeScript dentro de un proyecto se divide en una serie de pasos, estos son:
+
+1. Verificar que tenés Node.js instalado. En caso de no tenerlo, instalarlo.
+2. Crear la base del proyecto con:
+
+- mkdir proyecto-ts
+- cd proyecto-ts
+
+3. Inicializar el proyecto con "npm init -y"
+4. Instalamos TypeScript con "npm i -D typescript @types/node@24 tsx"
+5. Comprobamos que se instaló con "npx tsc -v"
+6. Y creamos a mano el archivo tsconfig.json.
+
+## ¿Para qué sirve el archivo tsconfig.json?
+
+- El archivo tsconfig.json sirve para definir la configuración del proyecto que se está realizando. Le indica a TypeScript 3 cosas muy importantes:
+
+1. Qué archivos forman parte del proyecto. Se indica con el "include"
+2. Qué tan estricto debe ser al verificar tipos. Se indica con el "strict"
+3. De qué forma generar el JavaScript
+
+## ¿Qué hace el comando tsc?
+
+- tsc es el compilador de TypeScript. Es el encargado de pasar todo el código de TypeScript a lenguaje JavaScript. Al ejecutarlo, suceden una serie de pasos.
+
+1. Busca el "tsconfig.json"
+2. Toma los archivos indicados en el "include"
+3. Verificar los tipos de todo el código y muestra los errores.
+4. Genera los archivos ".js" en la carpeta "outDir"
+
+## ¿Qué diferencia hay entre ejecutar un archivo con tsc, tsx y node?
+
+- "tsc" es el compilador de TypeScript. No ejecuta el código: revisa los tipos, muestra los errores que encuentra y convierte los archivos .ts en archivos ".js".
+- "node" es el entorno que ejecuta JavaScript. No entiende TypeScript, por eso se usa para ejecutar los archivos ".js" que genera tsc.
+- "tsx" es una herramienta que ejecuta archivos ".ts" directamente, sin generar archivos ".js", ya que los convierte en memoria. A diferencia de tsc, no revisa los tipos, por lo que un error de tipado no impide que el código se ejecute.
+
 # Fuentes - Tema 1:
 
 - https://www.npmjs.com/package/typescript
@@ -41,3 +81,8 @@
 - https://codica.la/blog/todo-lo-que-debe-saber-el-principiante-sobre-typescript
 - https://www.unir.net/revista/ingenieria/que-es-typescript/
 - Material del Classroom.
+
+# Fuentes - Tema 2:
+
+- Material del Classroom.
+- https://medium.com/@seanbridger/typescript-basics-1-10-typescript-compiler-tsc-and-tsconfig-f9bf0134c5eb
