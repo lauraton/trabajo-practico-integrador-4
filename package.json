@@ -1,0 +1,24 @@
+{
+  "name": "trabajo-practico-integrador-4",
+  "version": "1.0.0",
+  "description": "- TypeScript es un lenguaje de programación desarrollado por Microsoft, siendo también un superconjunto de JavaScript. Es de tipado estático y agrega funciones que complementan las carencias que tiene JavaScript. A su vez, antes de ejecutarse, el programa de TypeScript se encarga de compilar o transpilar los archivos y pasarlo a lenguaje JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauraton/trabajo-practico-integrador-4.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/lauraton/trabajo-practico-integrador-4/issues"
+  },
+  "homepage": "https://github.com/lauraton/trabajo-practico-integrador-4#readme",
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
