@@ -159,6 +159,64 @@ function crear(nombre: string, rol: string = "USER"): void {
 }
 ```
 
+# Tema 5: Interfaces y type
+
+## ¿Qué es una interfaz y para qué sirve?
+
+- Una interfaz pone nombre a la forma de un objeto: las propiedades que debe tener y el tipo de cada una. Una vez declarada, usas el nombre como tipo, y el compilador comprueba contra ella cada objeto que pasas, devuelves o asignas.
+
+```typescript
+interface User {
+  id: number;
+  name: string;
+  email?: string;
+}
+```
+
+## ¿Qué es un type?
+
+- Un type (alias de tipo) permite asignarle un nombre a un tipo para reutilizarlo. Al igual que una interfaz, puede definir la forma de un objeto, pero además puede representar uniones, tipos literales o tipos primitivos. Se declara con la palabra "type", seguida del nombre, un "=" y el tipo.
+
+```typescript
+type Alumno = {
+  nombre: string;
+  edad: number;
+};
+
+type Id = string | number;
+
+const alumno: Alumno = { nombre: "Lautaro", edad: 20 };
+let idAlumno: Id = 1234;
+```
+
+## ¿Cómo se declara una propiedad opcional?
+
+- Se declara poniendo ? después del nombre de la propiedad, y antes de los dos puntos.
+
+```typescript
+interface Alumno {
+  nombre: string;
+  edad: number;
+  email?: string;
+}
+```
+
+- Esto hace que sea obligatorio ingresar nombre y edad, pero no email.
+
+## ¿Cuándo conviene usar cada uno?
+
+- En ambos se puede definir la forma de los objetos, pero usamos type cuando necesitamos uniones, definir estados o variantes, tipos primitivos o componentes lógicos (como tuplas). Y usamos interface cuando hay que extenderlos con extend
+
+```typescript
+interface Persona {
+  nombre: string;
+}
+
+type Rol = "ADMIN" | "USER";
+```
+
+# Tema 6: Enums y tipos literales
+
 # Fuentes - Tema 1:
 
 - https://www.npmjs.com/package/typescript
@@ -186,3 +244,9 @@ function crear(nombre: string, rol: string = "USER"): void {
 - Material del Classroom.
 - https://coddy.tech/docs/es/typescript/functions
 - https://coddy.tech/docs/es/typescript/optional-parameters
+
+# Fuentes- Tema 5:
+
+- Material del Classroom.
+- https://coddy.tech/docs/es/typescript/interfaces
+- https://coddy.tech/docs/es/typescript/interface-vs-type
