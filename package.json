@@ -4,8 +4,15 @@
   "description": "- TypeScript es un lenguaje de programación desarrollado por Microsoft, siendo también un superconjunto de JavaScript. Es de tipado estático y agrega funciones que complementan las carencias que tiene JavaScript. A su vez, antes de ejecutarse, el programa de TypeScript se encarga de compilar o transpilar los archivos y pasarlo a lenguaje JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "tema1": "tsx src/01-typescript.ts",
+  "tema2": "tsx src/02-crear-ejecutar.ts",
+  "tema3": "tsx src/03-tipos-basicos.ts",
+  "tema4": "tsx src/04-funciones.ts",
+  "tema5": "tsx src/05-interfaces-types.ts",
+  "tema6": "tsx src/06-enums-literales.ts",
+  "check": "tsc --noEmit",
+  "build": "tsc"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lauraton/trabajo-practico-integrador-4.git"
