@@ -73,6 +73,45 @@
 - "node" es el entorno que ejecuta JavaScript. No entiende TypeScript, por eso se usa para ejecutar los archivos ".js" que genera tsc.
 - "tsx" es una herramienta que ejecuta archivos ".ts" directamente, sin generar archivos ".js", ya que los convierte en memoria. A diferencia de tsc, no revisa los tipos, por lo que un error de tipado no impide que el código se ejecute.
 
+# Tema 3: Tipos básicos
+
+## ¿Qué son los tipos string, number y boolean?
+
+- Son los tipos primitivos de TypeScript. Estos son:
+
+1. String: Referido al texto, y usado entre comillas simples, dobles y backticks.
+2. Number: Referido a los números, tanto enteros como reales.
+3. Boolean: Referido a "true" o "false", teniendo sólo dos valores para elegir.
+
+## ¿Cómo se declara un array con tipo?
+
+- Para declarar un array con tipo, debemos poner el tipo (string, number) y luego corchetes [ ].
+  Por ejemplo:
+  ```typescript
+  const names: string[] = ["Lu", "Azul"];
+  ```
+- Asimismo, también se pueden declarar arrays usando "Array:<string>"
+
+```typescript
+const names: Array<string> = ["Bautista", "Eluney"];
+```
+
+- Es de aclarar que el "string" en cada línea de código es cambiable a "number". Y, en caso de querer ingresar un valor que no es apropiado para el tipo declarado, entonces no se podrá y marcará un error.
+
+## ¿Qué es un tipo unión?
+
+- El tipo unión se refiere a los Arrays que contienen más de un tipo aceptable en el mismo. Por ejemplo:
+
+```typescript
+const datos: (string | number)[] = ["Bautista", 19];
+```
+
+## ¿Por qué se recomienda evitar any?
+
+- Se recomienda evitar el "any" debido a que no permite la detección de errores hasta su ejecución.
+
+# Tema 4: Funciones
+
 # Fuentes - Tema 1:
 
 - https://www.npmjs.com/package/typescript
@@ -86,3 +125,11 @@
 
 - Material del Classroom.
 - https://medium.com/@seanbridger/typescript-basics-1-10-typescript-compiler-tsc-and-tsconfig-f9bf0134c5eb
+
+# Fuentes - Tema 3:
+
+- https://mimo.org/glossary/typescript/union
+- https://coddy.tech/docs/es/typescript/any-vs-unknown
+- https://coddy.tech/docs/es/typescript/arrays
+- https://www.coddykit.com/es/courses/typescript/primitive-types-string-number-boolean-3341784
+- https://coddy.tech/docs/es/typescript/arrays
