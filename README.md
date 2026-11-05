@@ -112,6 +112,53 @@ const datos: (string | number)[] = ["Bautista", 19];
 
 # Tema 4: Funciones
 
+## ¿Cómo se indican los tipos de parámetros?
+
+- Los tipos de los parámetros se indican colocando dos puntos (:) después del nombre de cada parámetro, seguido del tipo de dato. Si se pasa un valor de otro tipo o falta un parámetro obligatorio, TypeScript muestra un error al compilar.
+
+```typescript
+function sumar(a: number, b: number) {
+  return a + b;
+}
+
+sumar(5, 3);
+sumar("5", 3);
+```
+
+## ¿Cómo se indica el tipo de retorno?
+
+- El tipo de retorno se indica colocando dos puntos (:) después del paréntesis de cierre de los parámetros, seguido del tipo de dato que devuelve la función: function f(): tipo. Es opcional: si no se indica, TypeScript infiere el tipo a partir de cada return del cuerpo. Si la función no devuelve nada, se usa void.
+
+```typescript
+function sumar(a: number, b: number): number {
+  return a + b;
+}
+
+function mostrar(mensaje: string): void {
+  console.log(mensaje);
+}
+```
+
+## ¿Qué es un parámetro opcional?
+
+- Al hablar de un parámetro opcional nos referimos al parámetro que el usuario puede omitir ingresar. Este se indica con un "?" antes de poner los ":" en el parámetro.
+
+```typescript
+function saludar(nombre: string, apellido?: string): string {
+  return apellido ? `Hola ${nombre} ${apellido}` : `Hola ${nombre}`;
+}
+```
+
+## ¿Qué es un parámetro por defecto?
+
+- Un parámetro por defecto es aquel al que se le asigna un valor predeterminado por el desarrollador. Se indica colocando el "=" después del tipo de parámetro que se le asigna.
+
+```typescript
+function crear(nombre: string, rol: string = "USER"): void {
+  console.log(`Usuario ${nombre} con rol ${rol}`);
+}
+```
+
 # Fuentes - Tema 1:
 
 - https://www.npmjs.com/package/typescript
@@ -133,3 +180,9 @@ const datos: (string | number)[] = ["Bautista", 19];
 - https://coddy.tech/docs/es/typescript/arrays
 - https://www.coddykit.com/es/courses/typescript/primitive-types-string-number-boolean-3341784
 - https://coddy.tech/docs/es/typescript/arrays
+
+# Fuentes - Tema 4:
+
+- Material del Classroom.
+- https://coddy.tech/docs/es/typescript/functions
+- https://coddy.tech/docs/es/typescript/optional-parameters
